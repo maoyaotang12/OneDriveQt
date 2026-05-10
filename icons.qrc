@@ -1,0 +1,9 @@
+<RCC>
+    <qresource>
+        <file>icon_syncing.svg</file>
+        <file>icon_done.svg</file>
+        <file>icon_idle.svg</file>
+        <file>icon_stopped.svg</file>
+        <file>icon_error.svg</file>
+    </qresource>
+</RCC>

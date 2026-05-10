@@ -367,16 +367,15 @@ void MainWindow::onTrayClicked(QSystemTrayIcon::ActivationReason r)
 
 void MainWindow::updateTrayIcon()
 {
-    QString appPath = QCoreApplication::applicationDirPath() + "/../";
     QIcon icon;
 
     switch (trayStatus) {
-        case TraySyncing:   icon = QIcon(appPath + "icon_syncing.svg"); break; // 同步
-        case TraySyncDone:  icon = QIcon(appPath + "icon_done.svg");    break; // 完成
-        case TrayIdle:      icon = QIcon(appPath + "icon_idle.svg");    break; // 云朵（默认）
-        case TrayStopped:   icon = QIcon(appPath + "icon_stopped.svg"); break;
-        case TrayError:     icon = QIcon(appPath + "icon_error.svg");   break;
-        default:            icon = QIcon(appPath + "icon_idle.svg");
+        case TraySyncing:   icon = QIcon(":/icon_syncing.svg"); break;
+        case TraySyncDone:  icon = QIcon(":/icon_done.svg");    break;
+        case TrayIdle:      icon = QIcon(":/icon_idle.svg");    break;
+        case TrayStopped:   icon = QIcon(":/icon_stopped.svg"); break;
+        case TrayError:     icon = QIcon(":/icon_error.svg");   break;
+        default:            icon = QIcon(":/icon_idle.svg");
     }
     tray->setIcon(icon);
 }
@@ -429,7 +428,7 @@ void MainWindow::showAbout()
 {
     QMessageBox::about(this, "关于",
                        "OneDriveQt 同步工具\n"
-                       "版本：1.0.0\n"
+                       "版本：1.0.1\n"
                        "作者：MaoYaoTang\n"
                        "功能：OneDrive 实时同步\n"
                        "支持开机自启、状态图标自动切换");
