@@ -433,3 +433,22 @@ void MainWindow::showAbout()
                        "功能：OneDrive 实时同步\n"
                        "支持开机自启、状态图标自动切换");
 }
+
+void MainWindow::loadSettings()
+{
+    QSettings set("OneDriveQt", "OneDriveQt");
+
+    // 同步目录
+    syncDirEdit->setText(set.value("syncDir", QDir::homePath() + "/OneDrive").toString());
+
+    // 关闭最小化到托盘
+    closeToTrayCheck->setChecked(set.value("closeToTray", false).toBool());
+}
+
+// 保存配置（设置时存）
+void MainWindow::saveSettings()
+{
+    QSettings set("OneDriveQt", "OneDriveQt");
+    set.setValue("syncDir", syncDirEdit->text());
+    set.setValue("closeToTray", closeToTrayCheck->isChecked());
+}

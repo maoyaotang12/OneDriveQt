@@ -51,6 +51,8 @@ private slots:
 private:
     void updateTrayByStatus();
     void updateTrayIcon();
+    void loadSettings();   // 读取配置
+    void saveSettings();
     QSystemTrayIcon *tray;
     QMenu *trayMenu;
     QProcess *proc;
