@@ -1,7 +1,7 @@
 README.md
 OneDriveQt ― Linux 可视化 OneDrive 同步客⼾端
 ⼀款专为 Linux 打造的⾼颜值、全功能 OneDrive 图形同步⼯具
-<img src="AnimTimer.webp" width="450">
+<img src="AnimTimer.webp" width="250">
 <img src="main.png" width="750">
 
 ---
